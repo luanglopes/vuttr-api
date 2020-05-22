@@ -1,0 +1,9 @@
+{
+  "name": "vuttr",
+  "version": "1.0.0",
+  "description": "Api para gerenciamento de ferramentas",
+  "main": "src/server.ts",
+  "author": "Luan Lopes",
+  "license": "MIT",
+  "repository": "https://github.com/luanglopes/vuttr.git"
+}
