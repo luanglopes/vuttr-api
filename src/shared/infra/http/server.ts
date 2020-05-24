@@ -3,6 +3,7 @@ import helmet from 'helmet'
 import cors from 'cors'
 import 'express-async-errors'
 
+import '../mongoose'
 import AppError from '@shared/errors/AppError'
 import routes from './routes'
 
