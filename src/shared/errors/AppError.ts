@@ -8,7 +8,7 @@ class AppError {
 
   public readonly statusCode: number
 
-  public readonly details: IDetails | undefined
+  public readonly details?: IDetails
 
   constructor(message: string, statusCode = 400, details?: IDetails) {
     this.message = message

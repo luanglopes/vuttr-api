@@ -1,3 +1,6 @@
+/* eslint-disable no-console */
+import 'reflect-metadata'
+
 import express, { NextFunction, Response, Request } from 'express'
 import helmet from 'helmet'
 import cors from 'cors'
@@ -5,6 +8,8 @@ import 'express-async-errors'
 
 import AppError from '@shared/errors/AppError'
 import routes from './routes'
+
+import '@shared/infra/typeorm'
 
 const app = express()
 
@@ -24,7 +29,6 @@ app.use((err: Error, req: Request, res: Response, _: NextFunction) => {
       .json({ staus: 'error', message: err.message, details: err.details })
   }
 
-  // eslint-disable-next-line no-console
   console.error(err)
 
   return res
@@ -33,6 +37,5 @@ app.use((err: Error, req: Request, res: Response, _: NextFunction) => {
 })
 
 app.listen(3333, () => {
-  // eslint-disable-next-line no-console
   console.log('🚀 Server started on port 3333')
 })
