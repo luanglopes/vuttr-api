@@ -1,4 +1,4 @@
-export interface ITool {
+export default interface IToolDTO {
   id: string
   title: string
   link: string
